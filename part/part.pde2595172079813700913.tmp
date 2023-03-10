@@ -1,0 +1,17 @@
+particle arr[] = new particle[10];
+
+void setup(){
+  size(600,600);
+  for(int i =0; i<arr.length; i++){
+    arr[i] = new particle(random(1,width), random(1,height));
+  }
+}
+
+particle a = new particle(100,100);
+void draw(){
+  background(0);
+  for(int i =0; i<arr.length; i++){
+    arr[i].updateParticle();
+    arr[i].drawParticle();
+  }
+}
